@@ -1,12 +1,11 @@
-import SiteHeader from "./components/SiteHeader";
-import { ApolloClient, InMemoryCache, ApolloProvider} from "@apollo/client";
-
 import {Routes, Route} from "react-router-dom";
+import {ApolloClient, InMemoryCache, ApolloProvider} from "@apollo/client";
+
+import SiteHeader from "./components/SiteHeader";
 import Homepage from "./pages/Homepage";
 import ArticleDetails from "./pages/ArticleDetails";
 import Category from "./pages/Category";
 
-//Apollo CLient
 const client = new ApolloClient({
   uri: 'http://localhost:1337/graphql',
   cache: new InMemoryCache()
