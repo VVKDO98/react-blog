@@ -1,24 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { useQuery, gql } from '@apollo/client';
-
-const ARTICLES = gql`
-query GetArticles{ 
-	articles { 
-  	data{
-      id,
-      attributes{
-        title,
-        content,
-      }
-    }
-  }
-}
-`
+import useFetch from "../hooks/useFetch";
 
 const Homepage = () => {
-    // const {loading, error, data} = useFetch('http://localhost:1337/api/articles')
-    const {loading, error, data} = useQuery(ARTICLES);
+    const {loading, error, data} = useFetch('http://localhost:1337/api/articles')
 
     if(loading) return <p>Loading ...</p>
     if(error) return <p>Error ...</p>
@@ -27,7 +12,7 @@ const Homepage = () => {
 
     return (
         <div>
-            {data.articles.data.map((article) => (
+            {data.map((article) => (
                 <div key={article.id}>
                     <h2>{article.attributes.title}</h2>
                     <small>console list</small>
