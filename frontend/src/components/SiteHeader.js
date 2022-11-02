@@ -27,9 +27,11 @@ const SiteHeader = () => {
         <div>
             <Link to="/"><h1>Articles</h1></Link>
             <nav>
-                {data.categories.data.map((category) => (
-                    <li><Link key={category.id} to={`category/${category.id}`}>{category.attributes.name}</Link></li>
-                ))}
+                <ul>
+                    {data.categories.data.map((category) => (
+                        <li><Link key={category.id} to={`category/${category.id}`}>{category.attributes.name}</Link></li>
+                    ))}
+                </ul>
             </nav>
         </div>
     );
