@@ -13,10 +13,10 @@ const Homepage = () => {
     return (
         <div>
             {data.map((article) => (
-                <div key={article.id}>
-                    <h2>{article.attributes.title}</h2>
-                    <p>{article.attributes.content.substring(0, 200)}...</p>
-                    <Link to={`/details/${article.id}`}>Read more</Link>
+                <div key={article.id} className="mb-5">
+                    <h2 className='text-2xl text-green font-dmserif mb-3'>{article.attributes.title}</h2>
+                    <p className='text-base mb-3'>{article.attributes.content.substring(0, 200)}<Link to={`/details/${article.id}`} className='text-base text-green font-thin'> ... read more</Link></p>
+                    <p>{article.attributes.date}</p>
                 </div>
             ))}
         </div>

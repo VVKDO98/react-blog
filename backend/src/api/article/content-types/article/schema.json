@@ -26,6 +26,10 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "articles"
+    },
+    "date": {
+      "type": "date",
+      "required": true
     }
   }
 }

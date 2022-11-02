@@ -24,12 +24,16 @@ const SiteHeader = () => {
     console.log(data.categories.data);
 
     return (
-        <div>
-            <Link to="/"><h1>Articles</h1></Link>
-            <nav>
-                <ul>
+        <div className='w-full flex flex-col justify-center items-center'>
+            <Link to="/"><h1 className='mb-[60px] text-white text-center uppercase'>B-LOG</h1></Link>
+            <nav className='w-full'>
+                <ul className='flex flex-row justify-center gap-8'>
                     {data.categories.data.map((category) => (
-                        <li><Link key={category.id} to={`category/${category.id}`}>{category.attributes.name}</Link></li>
+                        <li>
+                            <Link key={category.id} to={`category/${category.id}`} className='text-green focus:text-red'>
+                                {category.attributes.name}
+                            </Link>
+                        </li>
                     ))}
                 </ul>
             </nav>

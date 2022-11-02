@@ -1,7 +1,7 @@
 import {Routes, Route} from "react-router-dom";
 import {ApolloClient, InMemoryCache, ApolloProvider} from "@apollo/client";
 
-import SiteHeader from "./components/SiteHeader";
+// import SiteHeader from "./components/SiteHeader";
 import Homepage from "./pages/Homepage";
 import ArticleDetails from "./pages/ArticleDetails";
 import Category from "./pages/Category";
@@ -14,8 +14,8 @@ const client = new ApolloClient({
 function App() {
   return (
       <ApolloProvider client={client}>
-        <div className="App">
-          <SiteHeader/>
+        <div>
+          {/* <SiteHeader/> */}
           <Routes>
             <Route exact path="/" element={<Homepage/>}/>
             <Route path="/details/:id" element={<ArticleDetails/>}/>
