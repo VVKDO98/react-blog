@@ -15,7 +15,6 @@ const ArticleDetails = () => {
     return (
         <div>
             <h2>{data.attributes.title}</h2>
-            <small>console list</small>
             <p>{data.attributes.content}</p>
         </div>
     );
