@@ -31,10 +31,9 @@ const ArticleDetails = () => {
     console.log(data);
     
     return (
-        <div>
-            <h2>{data.article.data.attributes.title}</h2>
-            <small>console list</small>
-            <ReactMarkdown>{data.article.data.attributes.content}</ReactMarkdown>
+        <div className='mt-12'>
+            <h2 className='text-3xl text-green font-dmserif mb-8'>{data.article.data.attributes.title}</h2>
+            <ReactMarkdown className='text-base first-letter:text-6xl'>{data.article.data.attributes.content}</ReactMarkdown>
         </div>
     );
 };
