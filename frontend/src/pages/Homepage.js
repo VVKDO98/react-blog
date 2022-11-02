@@ -11,12 +11,12 @@ const Homepage = () => {
     console.log(data);
 
     return (
-        <div>
+        <div className='mb-40'>
             {data.map((article) => (
                 <div key={article.id} className="mb-5">
                     <h2 className='text-2xl text-green font-dmserif mb-3'>{article.attributes.title}</h2>
                     <p className='text-base mb-3'>{article.attributes.content.substring(0, 200)}<Link to={`/details/${article.id}`} className='text-base text-green font-thin'> ... read more</Link></p>
-                    <p>{article.attributes.date}</p>
+                    <p className='text-base font-semibold'>{article.attributes.date}</p>
                 </div>
             ))}
         </div>

@@ -15,6 +15,7 @@ query GetCategory($id: ID!) {
                   attributes{
                     title,
                     content,
+                    date,
                     categories {
                       data {
                         id,
@@ -43,12 +44,12 @@ const Category = () => {
 
     return (
         <div>
-            <h2>{data.category.data.attributes.name}</h2>
+            <p className='text-base'>{data.category.data.attributes.name}</p>
             {data.category.data.attributes.articles.data.map((article) => (
                 <div key={article.id}>
-                    <h2>{article.attributes.title}</h2>
-                    <p>{article.attributes.content.substring(0, 200)}...</p>
-                    <Link to={`/details/${article.id}`}>Read more</Link>
+                    <h2 className='text-2xl text-green font-dmserif mb-3'>{article.attributes.title}</h2>
+                    <p className='text-base mb-3'>{article.attributes.content.substring(0, 200)}<Link to={`/details/${article.id}`} className='text-base text-green font-thin'>... read more</Link></p>
+                    <p className='text-base font-semibold'>{article.attributes.date}</p>
                 </div>
             ))}
         </div>

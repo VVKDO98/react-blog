@@ -24,7 +24,7 @@ const Menu = () => {
     console.log(data.categories.data);
 
     return (
-        <div className='w-full h-20 flex flex-col justify-center items-center sticky bottom-0 bg-grey '>
+        <div className='w-full h-20 flex flex-col justify-center items-center fixed bottom-0 left-0 bg-grey shadow-cust'>
             <nav className='w-full'>
                 <ul className='flex flex-row justify-center gap-8'>
                     {data.categories.data.map((category) => (
