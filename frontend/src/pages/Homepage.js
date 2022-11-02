@@ -5,8 +5,8 @@ import useFetch from "../hooks/useFetch";
 const Homepage = () => {
     const {loading, error, data} = useFetch('http://localhost:1337/api/articles')
 
-    if(loading) return <p>Loading ...</p>
-    if(error) return <p>Error ...</p>
+    if(loading) return <p>Loading articles</p>
+    if(error) return <p>Error cannot get articles</p>
 
     console.log(data);
 

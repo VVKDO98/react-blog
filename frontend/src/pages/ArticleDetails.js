@@ -25,8 +25,8 @@ const ArticleDetails = () => {
     
     console.log(data);
 
-    if(loading) return <p>Loading ...</p>
-    if(error) return <p>Error ...</p>
+    if(loading) return <p>Loading article</p>
+    if(error) return <p>Error article</p>
 
     console.log(data);
     
