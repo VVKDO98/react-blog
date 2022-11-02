@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
 
 const DETAILS = gql`
-query GetArticle($id: ID) { 
-	articles{ 
-  	data(id: $id){
+query GetArticle($id: ID!){ 
+	article(id: $id){ 
+  	data{
       id,
       attributes{
         title,
@@ -21,6 +21,7 @@ const ArticleDetails = () => {
     const {loading, error, data} = useQuery(DETAILS, {
         variables: {id: id}
     });
+    
     console.log(data);
 
     if(loading) return <p>Loading ...</p>
@@ -29,9 +30,9 @@ const ArticleDetails = () => {
     
     return (
         <div>
-            <h2>{data.attributes.title}</h2>
+            <h2>{data.article.data.attributes.title}</h2>
             <small>console list</small>
-            <p>{data.attributes.content}</p>
+            <p>{data.article.data.attributes.content}</p>
         </div>
     );
 };
