@@ -3,7 +3,7 @@ import React from 'react';
 const Category = () => {
     return (
         <div>
-            <h1>Category</h1>
+            <h1>Cateogry Tech</h1>
         </div>
     );
 };
