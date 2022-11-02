@@ -30,7 +30,6 @@ const Homepage = () => {
             {data.articles.data.map((article) => (
                 <div key={article.id}>
                     <h2>{article.attributes.title}</h2>
-                    <small>console list</small>
                     <p>{article.attributes.content.substring(0, 200)}...</p>
                     <Link to={`/details/${article.id}`}>Read more</Link>
                 </div>

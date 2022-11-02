@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
+import ReactMarkdown from 'react-markdown';
 
 const DETAILS = gql`
 query GetArticle($id: ID!){ 
@@ -32,7 +33,7 @@ const ArticleDetails = () => {
         <div>
             <h2>{data.article.data.attributes.title}</h2>
             <small>console list</small>
-            <p>{data.article.data.attributes.content}</p>
+            <ReactMarkdown>{data.article.data.attributes.content}</ReactMarkdown>
         </div>
     );
 };
