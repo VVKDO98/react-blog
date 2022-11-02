@@ -5,6 +5,7 @@ import SiteHeader from "./components/SiteHeader";
 import Homepage from "./pages/Homepage";
 import ArticleDetails from "./pages/ArticleDetails";
 import Category from "./pages/Category";
+import Menu from "./components/Menu";
 
 const client = new ApolloClient({
   uri: 'http://localhost:1337/graphql',
@@ -21,6 +22,7 @@ function App() {
             <Route path="/details/:id" element={<ArticleDetails/>}/>
             <Route path="/category/:id" element={<Category/>}/>
           </Routes>
+          <Menu/>
         </div>
       </ApolloProvider>
   );

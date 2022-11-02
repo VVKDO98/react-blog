@@ -11,7 +11,7 @@ const Homepage = () => {
     console.log(data);
 
     return (
-        <div className='mt-20'>
+        <div>
             {data.map((article) => (
                 <div key={article.id} className="mb-5">
                     <h2 className='text-2xl text-green font-dmserif mb-3'>{article.attributes.title}</h2>
