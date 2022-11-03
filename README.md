@@ -6,13 +6,9 @@ The goal of this project is to develop a small blog with a home page, a category
 
 ## Screenshots
 
-### Desktop
-
 ![Desktop view](./assets/desktop.png)
 
-### Mobile
-
-![Mobile view](./assets/mobile.png)
+![Desktop view](./assets/mobile.png)
 
 ## Tools
 
