@@ -29,7 +29,7 @@ const Menu = () => {
                 <ul className='flex flex-row justify-center gap-8'>
                     {data.categories.data.map((category) => (
                         <li>
-                            <Link key={category.id} to={`category/${category.id}`} className='text-green focus:text-red'>
+                            <Link key={category.id} to={`category/${category.id}`} className='text-green focus:text-red selection:text-grey selection:bg-green'>
                                 {category.attributes.name}
                             </Link>
                         </li>
