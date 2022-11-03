@@ -19,7 +19,7 @@ const Menu = () => {
     const {loading, error, data} = useQuery(CATEGORIES);
 
     if(loading) return <p>Loading navigation</p>
-    if(error) return <p>Error navigation</p>
+    if(error) return <p>Unable to load navigation</p>
 
     console.log(data.categories.data);
 

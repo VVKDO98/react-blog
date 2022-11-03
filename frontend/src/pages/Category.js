@@ -37,8 +37,8 @@ const Category = () => {
         variables: {id: id}
     });
 
-    if(loading) return <p>Loading category</p>
-    if(error) return <p>Error category</p>
+    if(loading) return <p>Loading of category</p>
+    if(error) return <p>Unable to load category</p>
 
     console.log(data);
 

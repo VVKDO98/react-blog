@@ -5,7 +5,7 @@ import App from './App';
 import './style/index.css';
 
 document.querySelector('body').className = "bg-grey font-lexend text-white";
-document.querySelector('#root').className = "w-4/5 m-auto relative";
+document.querySelector('#root').className = "w-4/5 m-auto relative lg:w-3/5";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
