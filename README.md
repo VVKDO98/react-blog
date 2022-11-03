@@ -18,7 +18,7 @@ The goal of this project is to develop a small blog with a home page, a category
 
 - React
 - JavaScript
-- Tailwind
+- Tailwind 
 - Strapi
 
 ## Links
