@@ -6,15 +6,23 @@ The goal of this project is to develop a small blog with a home page, a category
 
 ## Screenshots
 
-![Desktop view](./assets/desktop.png) ![Mobile view](./assets/mobile.png)
+### Desktop
 
-## Run servers
-```
-cd backend/
-npm run develop
-```
+![Desktop view](./assets/desktop.png)
 
-```
-cd frontend/
-npm start
-```
+### Mobile
+
+![Mobile view](./assets/mobile.png)
+
+## Tools
+
+- React
+- JavaScript
+- Tailwind
+- Strapi
+
+## Links
+
+- [Strapi](https://strapi.io/)
+- [GraphQL](https://graphql.org/)
+- [Figma by Somnath Das](https://www.figma.com/community/file/1118764549305878223)
